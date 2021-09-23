@@ -4,49 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="assets/ico/inventando.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Lista de Peliculas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/59c8ee105d.js" crossorigin="anonymous"></script>
-    <title>Clase 07 - Netflix de Codo</title>
-    <!--
-        Esto es un bloque de comentario
-    -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 
-    <!--
-        Malas practicas, preferible no hacerlo...
-        <style>
-            footer {
-                background-color: violet;
-            }
-        </style>
-    -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-
-    <!-- img src="https://www.w3schools.com/html/pic_trulli.jpg" -->
-    <br>
-    <!-- Usar / barra -->
-    <a href="pages/movies.html">
-        <i class="fa fa-film ">Peliculas</i>    
-    </a>
-    <br>
-    <a id="login001" href="pages/login.html">Ingresar</a>
-    <br>
-    <a class="Botoncito" href="pages/signup.html">Registro</a>
-    <br>
-    <a class="Botoncito" href="pages/contact.html">Contactanos</a>
-    <br>
-    <a href="https://www.google.com" target="__blank">Enlace a otro lado</a>
-    <!-- No hacerlo... malas practicas 
-        <footer style="background-color:turquoise;"> Copyright 2021</footer>
-    -->
-    <footer style="background-color:turquoise;"> Copyright 2021</footer>
+    <header>
+        <h1><img class="logo" src="./assets/img/logo.svg">Pochocleras</h1>
+    </header>
+    <nav>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li>
+                <a href="../pages/movies.html"><i class="fa fa-film "></i> Peliculas</a>
+            </li>
+            <li>
+                <a href="../pages/login.html">Ingresar</a>
+            </li>
+            <li>
+                <a href="../pages/signup.html">Registro</a>
+            </li>
+            <li>
+                <a href="../pages/contact.html">Contactanos</a>
+            </li>
+            <li>
+                <a href="https://www.google.com" target="__blank">Enlace a otro lado</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="container">
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/1.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/2.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/3.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/4.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/5.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/6.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/7.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/8.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/9.jpg">
+            </a>
+        </article>
+        <article class="item">
+            <a href="../pages/player.html">
+                <img src="./assets/img/movies/10.jpg">
+            </a>
+        </article>
+    </section>
+    <footer>&copy; copyright 2021</footer>
 </body>
 
 </html>

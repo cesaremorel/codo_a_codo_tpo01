@@ -1,0 +1,233 @@
+body {
+    background-color: #3f382c;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+img.logo{
+    width: 4rem;
+}
+
+nav {
+    width: 100vw;
+    background-color: #3f382c;
+    min-height: 2.8em;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 999;
+    font-family: 'Acme', sans-serif;
+}
+
+.menu {
+    list-style-type: none;
+    list-style: none;
+    clear: both;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+
+.menu li {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+
+.menu li a {
+    text-decoration: none;
+    color: #f0df99;
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+}
+
+.menu li::first-letter {
+    font-size: 130%;
+}
+
+.menu li:hover::first-letter {
+    color: red;
+}
+
+/* menu icon */
+
+.menu-icon {
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+/* menu btn */
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked~.menu {
+    max-height: 290px;
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 10px;
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+article {
+    text-align: left;
+    vertical-align: middle;
+    flex: 22vw;
+    padding: 10px;
+}
+
+article img {
+    width: 95%;
+    filter: sepia(100%);
+    border: 2px solid #f0df99;
+    transform:scale(0.9)
+}
+
+article img:hover {
+    transition: all 0.4s;
+    filter: sepia(0%);
+    transform:scale(1)
+}
+
+article img:active {
+    box-shadow: 1px 1px 4px #ededed;
+}
+/* pantallas chicas */
+
+article {
+    min-width: 95%;
+    max-width: 100%;
+}
+
+article img {
+    max-width: 95vw;
+}
+
+nav {
+    font-size: 1.25rem;
+}
+/* celulares grandes */
+
+@media screen and (min-width: 330px) {
+    article {
+        min-width: 44%;
+        max-width: 49%;
+    }
+    article img {
+        max-width: 44vw;
+    }
+    nav {
+        font-size: 1.5rem;
+    }
+    /* tablet */
+    @media screen and (min-width: 600px) {
+        article {
+            min-width: 30%;
+            max-width: 33%;
+        }
+        article img {
+            max-width: 30vw;
+        }
+        nav {
+            font-size: 1.25rem;
+        }
+        /* pc escritorio */
+        @media screen and (min-width: 700px) {
+            .menu li {
+                float: left;
+            }
+            .menu li a {
+                padding: 10px 10px;
+            }
+            .menu {
+                clear: none;
+                float: left;
+                max-height: none;
+            }
+            .menu-icon {
+                display: none;
+            }
+            article {
+                max-width: 25%;
+                min-width: 22%;
+            }
+            article img {
+                max-width: 22vw;
+            }
+            nav {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
