@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Montserrat', sans-serif;
+    background: #000 url('../img/cine.jpg');
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .menu{
+        background: rgb(0,0,0,0.1);
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid rgb(255,255,255,0.5);
+    }
+        .logo{
+            flex: 1 1 auto;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+            .logo span{
+                color: rgba(253, 76, 0);
+                font-size: 30px;
+            }
+
+        .nav{
+            flex: 5 1 auto;
+        }
+
+            .nav a{
+                color: #fff;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+                font-weight: 700;
+            }
+
+            .nav a:hover{
+                text-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+                color: rgba(253, 76, 0);
+            }
+            
+        .social{
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px; 
+        }
+            .social a {
+                font-size: 18px;
+                color: #fff;
+                padding: 0 5px;
+            }
+            
+            .social a:hover{
+                text-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+            }
+
+        .login {
+            flex: 1 1 auto;
+        }
+            .login button{
+                background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+                border-radius: 6px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+                color: #FFFFFF;
+                height: 30px;
+                line-height: 30px;
+                text-transform: uppercase;
+                outline: 0;
+                overflow: hidden;
+                width: 80%;
+                transition: box-shadow .2s;
+                border: 0
+            }
+
+            .login button:hover{
+                box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+                font-weight: 700;
+            }
+
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .container h1 {
+            font-family: 'Lora', serif;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+section{
+    display: flex;
+}
+    .articulos{
+        background: #f7f7f7;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+        .articulos article {
+            flex: 1 1 40%;
+            color: #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0 0;
+            flex: 1 1 45%;
+            background: #ececec;
+        }
+
+        .articulos article h3 {
+            color: #fff;
+            font-size: 13px;
+            padding: 10px 0;
+            margin-top: -80px;
+        }
+
+        .articulos article h2 {
+            color: #fff;
+            font-size: 25px;
+            padding: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .articulos article img {
+            width: 50%;
+        }
+
+        .articulos .paginacion{
+            background: #70a3c4;
+            flex: 1 1 100%;
+
+        }
+    aside{
+        background: #f73f5200;
+        flex: 1 1 auto
+    }
+        .publicidad{
+            background: #ffea85;
+        }
+
+        aside .publicidad img {
+            width: 100%;
+        }
+
+footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+    .pie{
+        background: #e6afe2;
+        width: 300px;
+    }
+
+@media all and (max-width: 800px){
+    section{
+        flex-direction: column;
+    }
+
+    body{
+        background-position: right;
+    }
+    .menu{
+        flex-direction:  column;
+        height: auto;
+    }
+
+    .social{    
+        margin-top:10px;
+    }
+
+    .login button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+    aside{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction:  column;
+    }
+}
+
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction:  column;
+    }
+
+    .menu .nav a  {
+        font-size: 0.5rem;
+    }
+
+    .social{
+        display: none
+    }
+
+    .login button{
+        width: 200px;
+        font-size: 0.5rem;
+    }
+}
