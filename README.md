@@ -1,5 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1c92411b-3a20-4dc5-ae9d-4949b5152339/deploy-status)](https://app.netlify.com/sites/priceless-swartz-1c4a46/deploys)
+
 # TPO Front Integrador
-  HTML, CSS y Javascript
+
+ HTML, CSS y Javascript
 
 ## ¿Cuándo se entrega?
 
