@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+body>header {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+body>header div.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+body>header div.menu div.logo {
+    flex: 1 1 auto;
+}
+
+body>header div.menu nav.nav {
+    flex: 5 1 auto;
+}
+
+body>header div.menu nav.social {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+body>header div.menu nav.login {
+    flex: 1 1 auto;
+}
+
+body>main{
+    flex: 1;
+}
+
+body>main div.slogan {
+    display: flex;
+    align-items: center;
+}
+
+body>main section.categories {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+body>main section.categories section.movies {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body>main section.categories section.movies>header {
+    flex: 1 1 100%;
+}
+
+body>main section.categories section.movies section.movie {
+    flex: 1 1 20%;
+}
+
+body>main section.categories section.movies section.movie h3 {
+    flex: 1 1 100%;
+}
+
+body>footer {
+    flex: 1;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/***** MEDIA QUERY 800 ***********/
+
+@media all and (max-width: 800px) {
+    body>header div.menu {
+        flex-direction: column;
+    }
+    body>main section.categories section.movies section.movie {
+        flex: 1 1 30%;
+    }
+}
+
+/***** MEDIA QUERY 600 ***********/
+
+@media all and (max-width: 600px) {
+    body>main section.categories section.movies section.movie {
+        flex: 1 1 40%;
+    }
+}
+
+/***** MEDIA QUERY 400 ***********/
+
+@media all and (max-width: 400px) {
+    body>main section.categories section.movies {
+        flex-direction: column;
+    }
+}
