@@ -1,28 +1,54 @@
-*{
-    box-sizing: border-box;
-}
+@import url(./include/reset.css);
+@import url(./include/animation.css);
 
-body{
+body {
     display: flex;
     flex-flow: column nowrap;
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background-color: #E62C03;
+}
+
+.landing-page {
     background: #000 url('../img/cine.jpg');
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-}
-
-
-
-header{
+body>header{
     display: flex;
     flex-flow: column nowrap;
 }
+
+.form-container {
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.form-container main form{
+    margin-top: 10px;
+}
+
+.form-container main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1.5rem;
+}
+
+.form-container main .form-body{
+    flex: 2 1 auto;
+    flex-flow: row nowrap;
+}
+
+.form-container main .form-image{
+    flex: 1 1 auto;
+    flex-flow: row nowrap;
+}
+
+.form-container main .form-image img{
+    width: 80%;
+}
+
 
     .menu{
         background: rgb(0,0,0,0.1);
@@ -99,74 +125,104 @@ header{
                 font-weight: 700;
             }
 
-        .container{
+
+        .slogan{
             height: calc(100vh - 100px);
             display: flex;
             align-items: center;
         }
 
-        .container h1 {
+        .slogan p{
             font-family: 'Lora', serif;
-            font-size: 21px;
+            font-size: 2rem;
+            text-shadow:1px 1px 2px black, 0 0 1em #20100A, 0 0 0.2em #20100A;
+            width: 100%;
             color: #fff;
             font-weight: 300;
             text-align: center;
             line-height: 1.6;
+            margin: auto;
         }
 
-section{
+section.categories{
+    flex: 2 1 auto;
     display: flex;
+    flex-flow: column nowrap;
 }
-    .articulos{
-        background: #f7f7f7;
-        flex: 2 1 auto;
+    section.movies{
+        flex: 1 1 auto;
         display: flex;
         flex-flow: row wrap;
     }
 
-        .articulos article {
-            flex: 1 1 40%;
-            color: #444;
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin: 10px 10px 0 0;
-            flex: 1 1 45%;
-            background: #ececec;
-        }
-
-        .articulos article h3 {
-            color: #fff;
-            font-size: 13px;
-            padding: 10px 0;
-            margin-top: -80px;
-        }
-
-        .articulos article h2 {
-            color: #fff;
-            font-size: 25px;
-            padding: 0 0 10px 0;
-            text-transform: uppercase;
-        }
-
-        .articulos article img {
-            width: 50%;
-        }
-
-        .articulos .paginacion{
-            background: #70a3c4;
-            flex: 1 1 100%;
-
-        }
-    aside{
-        background: #f73f5200;
-        flex: 1 1 auto
+    section.recommended-movies{     
+        background: rgba(253, 76, 0, 0.9);
+        color: #fff;
     }
-        .publicidad{
-            background: #ffea85;
+    
+    section.classical-movies{
+        background-color: rgba(32, 16, 10, 0.8);
+        color: #E62C03;
+    }
+
+        section.movies>header{
+            flex: 1 1 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #fff;
+            text-shadow:1px 1px 2px black, 0 0 1em #20100A, 0 0 0.2em #20100A;
         }
 
-        aside .publicidad img {
+        section.movie  {
+            flex: 1 1 20%;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 10px;
+            
+        }
+
+        section.movie h3 {
+            color: #fff;
+            flex: 1 1 100%;
+            min-width: 100%;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            padding: 5px;
+            display: block;
+        }
+
+        section.movie h4 {
+            color: #fff;
+            font-size: 0.7rem;
+            text-align: right;
+            margin: 5px 0 5px 0;
+        }
+
+        section.movie p {
+            font-family: 'Lora', serif;
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+
+        section.recommended-movies p{
+            color: #20100A;
+        }
+        section.classical-movies p{
+            color: rgba(253, 76, 0);
+        }
+        section.movie img {
             width: 100%;
+            filter: opacity(0.5);
+            transform: scale(.9);
+        }
+
+        section.movie img:hover {
+            width: 100%;
+            animation: img-filter-on-hover;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            box-shadow: 1px 1px 2px black, 0 0 1em #20100A, 0 0 0.2em #20100A;
         }
 
 footer{
@@ -174,12 +230,12 @@ footer{
     flex-direction: row nowrap;
     background: rgb(0,0,0,0.5);
     justify-content: center;
-
+    align-items: baseline;
+    
 }
     .pie{
         width: 300px;
         font-size: 0.7rem;
-
     }
 
     .pie a{
@@ -187,14 +243,41 @@ footer{
         color: #e6a58f;
     }
 
-@media all and (max-width: 800px){
-    section{
-        flex-direction: column;
+    .cta-button{
+        background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+        border-radius: 6px;
+        box-shadow: rgb(0 0 0 / 10%) 0 2px 4px;
+        color: #FFFFFF;
+        height: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        outline: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: box-shadow .2s;
+        border: 0;    
+    }
+    
+    .cta-button:hover{
+        box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+        font-weight: 700;
     }
 
-    body{
+    .form-group{
+        margin-top: 1.5rem;
+
+    }
+
+@media all and (max-width: 800px){
+
+    .logo{
+        margin-top: 10px;
+    }
+
+    .landing-page {
         background-position: right;
     }
+
     .menu{
         flex-direction:  column;
         height: auto;
@@ -209,26 +292,30 @@ footer{
         margin-bottom: 10px;
         width: 200px;
     }
-    aside{
-        display: flex;
-        justify-content: center;
+
+    section.movie  {
+        flex: 1 1 30%;
     }
 
+
+    .form-container main .form-image{
+        display: none;
+    }
+    
 }
 
 @media all and (max-width: 600px){
-    .articulos{
-        flex-direction:  column;
+   
+    section.movie  {
+        flex: 1 1 40%;
     }
 }
 
 @media all and (max-width: 400px){
-    .aside{
-        flex-direction:  column;
-    }
+
 
     .menu .nav a  {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     .social{
@@ -237,6 +324,10 @@ footer{
 
     .login button{
         width: 200px;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    section.movies{
+        flex-direction:  column;
     }
 }

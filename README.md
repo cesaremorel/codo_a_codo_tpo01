@@ -12,12 +12,12 @@ Fecha límite de entrega: semana del 25/10 al 29/10.
 
 El TPO deberá cumplir con los siguientes requisitos:
 
-1. Poseer al menos 3 páginas html, siendo su temática libre.
+1. Poseer al menos 3 páginas html, siendo su temática libre. 
 2. Utilizar etiquetas semánticas para estructurar el sitio de forma correcta.
-3. Contener un formulario de contacto con validación realizada mediante Javascript.
+3. TODO: Contener un formulario de contacto con validación realizada mediante Javascript. 
 4. Utilizar iframes, íconos de FontAwesome, y fuentes locales o bien de Google Fonts.
 5. Tener una página totalmente responsive con 3 puntos de corte para 3 tamaños de dispositivos (PC escritorio, Tablet, Celular).
-6.  Utilizar al menos una animación, transformación o una transición (indicar dónde fue incorporada la animación).
+6. Utilizar al menos una animación, transformación o una transición (indicar dónde fue incorporada la animación).
 7. Poseer una estructura HTML maquetada con Flexbox y/o Grid.
 8. Sólo podrá utilizar Bootstrap en la página del formulario del sitio web.
 9. La página deberá subirse a un servidor on-line para poder ser navegada por el Docente. Ejemplo: Netlify o similar.

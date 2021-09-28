@@ -1,0 +1,9 @@
+@keyframes img-filter-on-hover {
+    from {
+        filter: opacity(0.5);
+        transform: scale(.9);
+    }
+    to {  filter: none;
+        transform: scale(1);
+    }
+  }
