@@ -1,0 +1,14 @@
+.form-check-input:checked {
+    background-color: rgba(253, 76, 0);
+    border-color: rgba(253, 76, 0);
+}
+
+.form-control:focus,
+.form-check-input:focus{
+    border-color: rgba(253, 76, 0, 0.5);
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px
+}
+
+.form-switch .form-check-input:focus{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb(255 169 132)'/%3e%3c/svg%3e")
+}

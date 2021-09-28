@@ -1,0 +1,21 @@
+.video-responsive {
+    display: flex;
+    min-height: 80vmin;
+}
+    
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    flex: 1;
+}
+
+
+@media all and (max-width: 800px){
+
+    .video-responsive {
+        min-height: 80vmin;
+    }
+
+}
+
+

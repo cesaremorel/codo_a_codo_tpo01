@@ -1,11 +1,13 @@
 @import url(./include/reset.css);
 @import url(./include/animation.css);
+@import url(./include/video-responsive.css);
+@import url(./include/boostrap-customs.css);
 
 body {
     display: flex;
     flex-flow: column nowrap;
-    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
     background-color: #E62C03;
 }
 
@@ -21,35 +23,26 @@ body>header{
     flex-flow: column nowrap;
 }
 
-.form-container {
-    background-color: rgb(255, 255, 255, 0.8);
+main section.contact-form {
+    margin: 1rem;
+    padding: 1rem;;
+    background-color: rgba(32, 16, 10, 0.8);
+    color: rgba(253, 76, 0);
+    max-width: 45%;
 }
 
-.form-container main form{
-    margin-top: 10px;
+main section.contact-form p.lead{
+    font-size: 1rem;
+    font-family: 'Lora', serif;
 }
 
-.form-container main {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 1.5rem;
+main section.contact-form label{
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    background-color: #20100A;
 }
-
-.form-container main .form-body{
-    flex: 2 1 auto;
-    flex-flow: row nowrap;
-}
-
-.form-container main .form-image{
-    flex: 1 1 auto;
-    flex-flow: row nowrap;
-}
-
-.form-container main .form-image img{
-    width: 80%;
-}
-
-
     .menu{
         background: rgb(0,0,0,0.1);
         display: flex;
@@ -104,27 +97,12 @@ body>header{
 
         .login {
             flex: 1 1 auto;
+            padding-right: 1rem;
         }
-            .login button{
-                background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
-                border-radius: 6px;
-                box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-                color: #FFFFFF;
-                height: 30px;
-                line-height: 30px;
-                text-transform: uppercase;
-                outline: 0;
-                overflow: hidden;
-                width: 80%;
-                transition: box-shadow .2s;
-                border: 0
-            }
 
-            .login button:hover{
-                box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
-                font-weight: 700;
-            }
-
+        .login button:hover{
+            cursor: pointer;
+        }
 
         .slogan{
             height: calc(100vh - 100px);
@@ -213,7 +191,7 @@ section.categories{
         }
         section.movie img {
             width: 100%;
-            filter: opacity(0.5);
+            filter: saturate(33%);
             transform: scale(.9);
         }
 
@@ -236,10 +214,10 @@ footer{
     .pie{
         width: 300px;
         font-size: 0.7rem;
+        text-align: center;
     }
 
     .pie a{
-
         color: #e6a58f;
     }
 
@@ -291,15 +269,16 @@ footer{
         margin-top: 10px;
         margin-bottom: 10px;
         width: 200px;
+        appearance: button;
+        padding: 5px, 20px;
     }
 
     section.movie  {
         flex: 1 1 30%;
     }
 
-
-    .form-container main .form-image{
-        display: none;
+    main section.contact-form{
+        max-width: 60%;
     }
     
 }
@@ -308,6 +287,10 @@ footer{
    
     section.movie  {
         flex: 1 1 40%;
+    }
+
+    main section.contact-form{
+        max-width: 70%;
     }
 }
 
@@ -329,5 +312,9 @@ footer{
 
     section.movies{
         flex-direction:  column;
+    }
+ 
+    main section.contact-form{
+        max-width: 90%;
     }
 }

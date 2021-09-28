@@ -30,34 +30,29 @@
         <span><i class="fas fa-couch"></i> SoFah!</span>
       </div>
       <div class="nav">
-        <a href="../index.html"><i class="fas fa-home"></i> <span>Inicio</span></a>
         <a href="./movies.html"><i class="fas fa-film"></i> <span>Peliculas</span></a>
-        <a href="./contact.html"><i class="fas fa-envelope"></i> <span>Contacto</span></a>
+        <a href="#"><i class="fas fa-envelope"></i> <span>Contacto</span></a>
       </div>
       <div class="social">
         <a href="#"><i class="fab fa-instagram-square"></i></a>
         <a href="#"><i class="fab fa-twitter-square"></i></a>
       </div>
-      <div class="login">
-        <button href="#">Ingresar</button>
-      </div>
     </div>
   </header>
-  <div class="form-container">
-    <main>
-      <div class="form-body">
-        <h2>Formulario de contacto</h2>
-        <p class="lead">Por favor llena el siguiente formulario para ponerte en contacto con nosotros.</p>
-        <form action="/pages/thanks.html" class="needs-validation" novalidate name="contact" method="POST" data-netlify="true">
-          <div class="form-group">
-          <label for="firstName" class="form-label">Nombres</label>
+  <main>
+    <section class="contact-form">
+      <h2>Contacto</h2>
+      <form action="/pages/thanks.html" class="needs-validation" novalidate name="contact" method="POST"
+        data-netlify="true">
+        <div class="form-group">
+          <label for="firstName" class="form-label">Nombre/s</label>
           <input type="text" name="first_name" class="form-control" id="firstName" placeholder="" value="" required>
           <div class="invalid-feedback">
             Olvidaste llenar tu nombre.
           </div>
         </div>
         <div class="form-group">
-          <label for="lastName" class="form-label">Apellido</label>
+          <label for="lastName" class="form-label">Apellido/s</label>
           <input type="text" name="last_name" class="form-control" id="lastName" placeholder="" value="" required>
           <div class="invalid-feedback">
             Olvidaste llenar tu nombre.
@@ -77,18 +72,7 @@
               correo.</label>
           </div>
         </div>
-          <div class="form-group">
-          <div class="form-check">
-            <input id="client" name="is_client" type="radio" class="form-check-input" required>
-            <label class="form-check-label" for="client">Soy cliente</label>
-          </div>
-          <div class="form-check">
-            <input id="no-client" name="is_client" type="radio" class="form-check-input" required>
-            <label class="form-check-label" for="no-client">Aun no soy cliente</label>
-          </div>
-        </div>
-      
-      <div class="form-group">
+        <div class="form-group">
           <label for="consult" class="form-label">Tu consulta</label>
           <textarea type="text" name="question" class="form-control" id="consult" placeholder="" required></textarea>
           <div class="invalid-feedback">
@@ -96,14 +80,10 @@
           </div>
         </div>
         <hr>
-          <button class="cta-button" type="submit">Enviar consulta</button>
-        </form>
-      </div>
-      <div class="form-image">
-        <img src="../assets/img/contact.svg">
-      </div>
-    </main>
-  </div>
+        <button class="cta-button" type="submit">Enviar consulta</button>
+      </form>
+    </div>
+  </main>
   <footer>
     <nav class="pie">
       <a href="mailto:cesaremorel@gmail.com&subject=Me%20gusto%20tu%20sitio">&copy; Codo a codo - Cesar Morel</a>
