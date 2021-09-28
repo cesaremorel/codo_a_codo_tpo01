@@ -48,24 +48,24 @@
       <div class="form-body">
         <h2>Formulario de contacto</h2>
         <p class="lead">Por favor llena el siguiente formulario para ponerte en contacto con nosotros.</p>
-        <form action="thanks.html" class="needs-validation" novalidate name="contact" method="GET" data-netlify="true">
+        <form action="thanks.html" class="needs-validation" novalidate name="contact" method="POST" data-netlify="true">
           <div class="form-group">
           <label for="firstName" class="form-label">Nombres</label>
-          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+          <input type="text" name="first_name" class="form-control" id="firstName" placeholder="" value="" required>
           <div class="invalid-feedback">
             Olvidaste llenar tu nombre.
           </div>
         </div>
         <div class="form-group">
           <label for="lastName" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+          <input type="text" name="last_name" class="form-control" id="lastName" placeholder="" value="" required>
           <div class="invalid-feedback">
             Olvidaste llenar tu nombre.
           </div>
         </div>
         <div class="form-group">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com" required>
           <div class="invalid-feedback">
             Olvidaste llenar tu correo electrónico
           </div>
@@ -79,18 +79,18 @@
         </div>
           <div class="form-group">
           <div class="form-check">
-            <input id="client" name="isClient" type="radio" class="form-check-input" required>
+            <input id="client" name="is_client" type="radio" class="form-check-input" required>
             <label class="form-check-label" for="client">Soy cliente</label>
           </div>
           <div class="form-check">
-            <input id="no-client" name="isClient" type="radio" class="form-check-input" required>
+            <input id="no-client" name="is_client" type="radio" class="form-check-input" required>
             <label class="form-check-label" for="no-client">Aun no soy cliente</label>
           </div>
         </div>
       
       <div class="form-group">
           <label for="consult" class="form-label">Tu consulta</label>
-          <textarea type="text" class="form-control" id="consult" placeholder="" required></textarea>
+          <textarea type="text" name="question" class="form-control" id="consult" placeholder="" required></textarea>
           <div class="invalid-feedback">
             ¿Cual es tu consulta?
           </div>
