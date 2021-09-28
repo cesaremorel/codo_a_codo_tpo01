@@ -67,6 +67,11 @@ body>header div.menu nav.login button:hover {
     cursor: pointer;
 }
 
+
+body>header div.menu nav.login a.logout {
+    color: red;
+}
+
 /** MAIN **/
 
 /** MAIN / INICIO **/
@@ -172,6 +177,29 @@ body>main section.categories section.classical-movies {
     color: rgba(253, 76, 0);
 }
 
+
+/** MAIN / THANKS **/
+
+body>main section.thanks{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(32, 16, 10, 0.8);
+    color: rgba(253, 76, 0);
+    max-width: 80%;
+}
+
+body>main section.thanks img {
+    width: 200px;
+}
+
+body>main section.thanks a {
+    color: white;
+}
+
+body>main section.thanks a:hover {
+    text-decoration: underline;
+}
+
 /** FOOTER **/
 
 body>footer {
@@ -209,6 +237,8 @@ body>footer nav.pie a {
     box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
     font-weight: 700;
 }
+
+
 
 /***** MEDIA QUERY 800 ***********/
 
