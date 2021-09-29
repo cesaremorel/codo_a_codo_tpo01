@@ -31,7 +31,7 @@ body>header div.menu div.logo span {
     font-size: 30px;
 }
 
-body>header div.menu nav.nav a {
+body>header div.menu nav.navigation a {
     color: #fff;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -40,7 +40,7 @@ body>header div.menu nav.nav a {
     font-weight: 700;
 }
 
-body>header div.menu nav.nav a:hover {
+body>header div.menu nav.navigation a:hover {
     text-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
     color: rgba(253, 76, 0);
 }
@@ -251,7 +251,15 @@ body>footer nav.pie a {
         height: auto;
     }
     body>header div.menu div.logo {
-        margin-top: 10px;
+        margin: 10px;
+    }
+    body>header div.menu nav.navigation{
+        margin: 0 0 10px 0;
+    }
+    body>header div.menu nav.navigation a{
+        margin: 0 15px;
+        text-align: center;
+        font-size: 1.0rem;
     }
     body>header div.menu nav.social {
         margin-top: 10px;
@@ -285,7 +293,8 @@ body>footer nav.pie a {
 /***** MEDIA QUERY 400 ***********/
 
 @media all and (max-width: 400px) {
-    body>header div.menu .nav a {
+ 
+    body>header div.menu nav.navigation a {
         font-size: 0.7rem;
     }
     body>header div.menu nav.social {
