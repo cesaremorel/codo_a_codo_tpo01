@@ -3,7 +3,6 @@
 @import url(./include/animation.css);
 @import url(./include/video-responsive.css);
 @import url(./include/boostrap-customs.css);
-
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #E62C03;
@@ -15,8 +14,16 @@ body {
 
 /** HEADER **/
 
+body>header {
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 20;
+}
+
 body>header div.menu {
-    background: rgb(0, 0, 0, 0.1);
+    background: #20100A;
     height: 60px;
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
@@ -67,12 +74,15 @@ body>header div.menu nav.login button:hover {
     cursor: pointer;
 }
 
-
 body>header div.menu nav.login a.logout {
     color: red;
 }
 
 /** MAIN **/
+
+body>main {
+    padding-top: 61px;
+}
 
 /** MAIN / INICIO **/
 
@@ -177,10 +187,9 @@ body>main section.categories section.classical-movies {
     color: rgba(253, 76, 0);
 }
 
-
 /** MAIN / THANKS **/
 
-body>main section.thanks{
+body>main section.thanks {
     margin: 1rem;
     padding: 1rem;
     background-color: rgba(32, 16, 10, 0.8);
@@ -203,17 +212,33 @@ body>main section.thanks a:hover {
 /** FOOTER **/
 
 body>footer {
-    background: rgb(0, 0, 0, 0.5);
+    background: #000000D0;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 body>footer nav.pie {
-    width: 300px;
     font-size: 0.7rem;
-    text-align: center;
 }
 
 body>footer nav.pie a {
     color: #e6a58f;
+}
+
+body>footer nav.social a {
+    font-size: 18px;
+    padding: 0 5px;
+    color: #e6a58f;
+}
+
+body>footer nav.social a:hover {
+    text-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+body>footer nav.social {
+    display: none;
 }
 
 /** BOTONES **/
@@ -238,8 +263,6 @@ body>footer nav.pie a {
     font-weight: 700;
 }
 
-
-
 /***** MEDIA QUERY 800 ***********/
 
 @media all and (max-width: 800px) {
@@ -253,17 +276,21 @@ body>footer nav.pie a {
     body>header div.menu div.logo {
         margin: 10px;
     }
-    body>header div.menu nav.navigation{
-        margin: 0 0 10px 0;
+    body>header div.menu nav.social {
+        display: none;
     }
-    body>header div.menu nav.navigation a{
-        margin: 0 15px;
+    body>header div.menu nav.navigation {
+        margin-bottom: 15px;
+    }
+    body>header div.menu nav.navigation a {
         text-align: center;
         font-size: 1.0rem;
     }
-    body>header div.menu nav.social {
-        margin-top: 10px;
+
+    body > header div.menu nav.login {
+        margin-top: -25px;
     }
+    
     body>header div.menu nav.login button {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -271,18 +298,24 @@ body>footer nav.pie a {
         appearance: button;
         padding: 5px, 20px;
     }
+    body>main {
+        padding-top: 93px;
+    }
     body>main section.categories section.movies section.movie {
         flex: 1 1 30%;
     }
     body>main section.contact-form {
         max-width: 60%;
     }
+    body>footer nav.social {
+        display: inline-block;
+    }
 }
 
 /***** MEDIA QUERY 600 ***********/
 
 @media all and (max-width: 600px) {
-    body>main section.categories section.moviessection.movie {
+    body>main section.categories section.movies section.movie {
         flex: 1 1 40%;
     }
     body>main section.contact-form {
@@ -293,7 +326,6 @@ body>footer nav.pie a {
 /***** MEDIA QUERY 400 ***********/
 
 @media all and (max-width: 400px) {
- 
     body>header div.menu nav.navigation a {
         font-size: 0.7rem;
     }
