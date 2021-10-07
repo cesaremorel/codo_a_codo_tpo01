@@ -22,10 +22,14 @@ body>header {
     z-index: 20;
 }
 
+body>header div.menu.scrollView {
+    background-color: #20100A;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
 body>header div.menu {
-    background: #20100A;
+    background: transparent;
     height: 60px;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
 
 body>header div.menu div.logo {
@@ -63,7 +67,7 @@ body>header div.menu nav.social a {
 }
 
 body>header div.menu nav.social a:hover {
-    text-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+    text-shadow: rgba(253, 76, 0, 1) 0 3px 8px;
 }
 
 body>header div.menu nav.login {
@@ -271,7 +275,7 @@ body>footer nav.social {
     }
     body>header div.menu {
         flex-direction: column;
-        height: auto;
+        height: 95px;
     }
     body>header div.menu div.logo {
         margin: 10px;
@@ -299,7 +303,7 @@ body>footer nav.social {
         padding: 5px, 20px;
     }
     body>main {
-        padding-top: 93px;
+        padding-top: 95px;
     }
     body>main section.categories section.movies section.movie {
         flex: 1 1 30%;

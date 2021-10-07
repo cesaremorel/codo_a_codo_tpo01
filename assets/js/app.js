@@ -18,3 +18,14 @@
         }, false)
       })
   })()
+
+
+  window.onscroll =  function() {
+    var menu = document.querySelector("body>header div.menu");
+    if( window.scrollY > 20) {
+      menu.classList.add("scrollView");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        menu.classList.remove("scrollView");
+    }
+  };
