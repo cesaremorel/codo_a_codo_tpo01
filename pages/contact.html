@@ -44,7 +44,7 @@
   <main>
     <section class="contact-form">
       <h2>Contacto</h2>
-      <form action="/pages/thanks.html" class="needs-validation" novalidate name="contact" method="POST"
+      <form id="contact-form" action="/pages/thanks.html" class="needs-validation" novalidate name="contact" method="POST"
         data-netlify="true">
         <div class="form-group">
           <label for="firstName" class="form-label">Nombre/s</label>
@@ -69,9 +69,21 @@
         </div>
         <div class="form-group">
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Quiero recibir noticias en esta casilla de
+            <input class="form-check-input" type="checkbox" id="subscribe" name="subscribe">
+            <label class="form-check-label" for="subscribe">Quiero recibir noticias en esta casilla de
               correo.</label>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+          <label for="reason">Motivo de la consulta</label>
+          <select class="form-control" id="reason" name="reason" required>
+            <option value="none" selected>-- Selecciona un motivo --</option>
+            <option value="upgrade-account">Obtener mas beneficios</option>
+            <option value="query">Duda genérica</option>
+            <option value="delete-account">Dar de baja mi cuenta</option>
+          </select>
+          <div class="invalid-feedback">
+            No olvides el motivo de tu consulta!
           </div>
         </div>
         <div class="form-group">

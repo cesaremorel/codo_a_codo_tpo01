@@ -23,6 +23,7 @@ Se generaron 6 paginas: `index.html`, `pages/contact.html`, `pages/login.html`, 
 **3. Contener un formulario de contacto con validación realizada mediante Javascript.**
 
 Se realizo un formulario de contacto en `pages/contact.html` y se le incorporó la validacion JS provista como ejemplo por boostrap. El código de validación esta en `assets/js/ap.js`. Se reutilizo esta logica en el formulario de ingreso `pages/login.html`. 
+Tambien se sumo una validacion custom al formulario de contacto para forzar al menos un tipo de consulta.
 
 **4. Utilizar iframes, íconos de FontAwesome, y fuentes locales o bien de Google Fonts.**
 
