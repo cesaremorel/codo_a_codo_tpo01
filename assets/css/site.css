@@ -85,7 +85,7 @@ body>header div.menu nav.login a.logout {
 /** MAIN **/
 
 body>main {
-    padding-top: 61px;
+    padding-top: 60px;
 }
 
 /** MAIN / INICIO **/
@@ -107,7 +107,7 @@ body>main div.slogan p {
 }
 
 body>main div.slogan {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
 }
 
 /** MAIN / LOGIN & CONTACT **/
